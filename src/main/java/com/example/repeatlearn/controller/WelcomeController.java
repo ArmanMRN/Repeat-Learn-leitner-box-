@@ -11,7 +11,7 @@ public class WelcomeController {
     private MediaView main_mediaView;
     private MediaPlayer mediaPlayer;
 
-    String url = "/com/example/repeatlearn/video.mp4";
+    String url = "/com/example/repeatlearn/videos/video.mp4";
 
     public void initialize(){
         mediaPlayer = new MediaPlayer(new Media(this.getClass().getResource(url).toExternalForm()));
