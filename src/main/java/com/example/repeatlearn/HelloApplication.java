@@ -1,5 +1,6 @@
 package com.example.repeatlearn;
 
+import com.example.repeatlearn.controller.MainTemplateController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,6 +17,8 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         //stage.setResizable(false);
         stage.show();
+
+        new MainTemplateController().openPage();
     }
 
     public static void main(String[] args) {

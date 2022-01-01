@@ -2,6 +2,7 @@ module com.example.repeatlearn {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.media;
+    requires com.jfoenix;
 
 
     opens com.example.repeatlearn to javafx.fxml;
