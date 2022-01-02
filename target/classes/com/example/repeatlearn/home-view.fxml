@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane_mainTemplate" prefHeight="600.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.repeatlearn.controller.HomeController">
+    <children>
+        <ImageView fx:id="imageView_mainTemplate" fitHeight="604.0" fitWidth="720.0" layoutX="-1.0" layoutY="-1.0">
+         <image>
+            <Image url="@images/bk-3.png" />
+         </image>
+        </ImageView>
+      <JFXButton fx:id="JFXButton_addNewWord" layoutX="74.0" layoutY="100.0" onAction="#JFXButton_addNewWord_Action" prefHeight="123.0" prefWidth="569.0" style="-fx-background-color: #4fb86b;" text="اضافه کردن لغت جدید">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="JFXButton_SeeTodaysWords" layoutX="75.0" layoutY="253.0" onAction="#JFXButton_SeeTodaysWords_Action" prefHeight="123.0" prefWidth="569.0" style="-fx-background-color: #4fb86b;" text="مشاهده لغات امروز">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>

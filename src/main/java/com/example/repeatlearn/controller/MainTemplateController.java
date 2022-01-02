@@ -15,8 +15,8 @@ import java.io.IOException;
 
 public class MainTemplateController {
 
-    @FXML
-    private AnchorPane anchorPane_mainTemplate;
+    /*@FXML
+    private AnchorPane anchorPane_mainTemplate;*/
 
     @FXML
     private HBox hbox;
@@ -27,7 +27,7 @@ public class MainTemplateController {
 
     public void initialize() throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/home-view.fxml"));
-        anchorPane_mainTemplate = anchorPane;
+        hbox.getChildren().add(anchorPane);
 
     }
 

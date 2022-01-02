@@ -5,6 +5,8 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 
+import java.io.IOException;
+
 public class WelcomeController {
 
     @FXML
@@ -13,16 +15,10 @@ public class WelcomeController {
 
     String url = "/com/example/repeatlearn/videos/video.mp4";
 
-    public void initialize(){
+    public void initialize() throws InterruptedException {
         mediaPlayer = new MediaPlayer(new Media(this.getClass().getResource(url).toExternalForm()));
         mediaPlayer.setAutoPlay(true);
         main_mediaView.setMediaPlayer(mediaPlayer);
     }
-    class thread extends Thread{
 
-        @Override
-        public void run(){
-
-        }
-    }
 }

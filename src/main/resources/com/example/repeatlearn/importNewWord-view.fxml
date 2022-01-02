@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.repeatlearn.controller.ImportNewWordController">
+   <children>
+      <TextField fx:id="textField_newWord_importNewWord" layoutX="381.0" layoutY="67.0" />
+      <Text layoutX="444.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="لغت" />
+      <TextArea fx:id="textArea_wordDefinition_importNewWord" layoutX="343.0" layoutY="132.0" prefHeight="169.0" prefWidth="230.0" />
+      <Text layoutX="439.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="تعریف" />
+      <JFXButton fx:id="button_save_importNewWord" layoutX="343.0" layoutY="321.0" onAction="#button_save_importNewWord_Action" prefHeight="42.0" prefWidth="230.0" style="-fx-background-color: #2596be;" text="ثبت" />
+      <ImageView fitHeight="400.0" fitWidth="291.0">
+         <image>
+            <Image url="@images/bk-4.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
