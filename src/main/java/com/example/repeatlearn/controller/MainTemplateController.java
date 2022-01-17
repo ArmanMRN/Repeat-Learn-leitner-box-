@@ -1,5 +1,6 @@
 package com.example.repeatlearn.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +20,15 @@ public class MainTemplateController {
     private AnchorPane anchorPane_mainTemplate;*/
 
     @FXML
+    private Button btnSabteLogateJadid;
+
+    @FXML
     private HBox hbox;
+
+    @FXML
+    void btnSabteLogateJadid_action(ActionEvent event) {
+
+    }
 
 
     Stage stage;

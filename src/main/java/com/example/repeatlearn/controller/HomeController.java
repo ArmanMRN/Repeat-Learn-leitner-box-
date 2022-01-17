@@ -31,13 +31,17 @@ public class HomeController {
     Parent root;
 
     @FXML
-    void JFXButton_SeeTodaysWords_Action(ActionEvent event) {
+    void JFXButton_SeeTodaysWords_Action(ActionEvent event) throws IOException {
 
     }
 
     @FXML
-    void JFXButton_addNewWord_Action(ActionEvent event) {
-
+    void JFXButton_addNewWord_Action(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/importNewWord-view.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("");
+        stage.setScene(new Scene(root,600,400));
+        stage.show();
     }
 
     public void openPage() throws IOException {

@@ -14,10 +14,10 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException, InterruptedException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainTemplate-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 330);
+        Scene scene = new Scene(fxmlLoader.load(), 910, 600);
         stage.setTitle("Hello!");
         stage.setScene(scene);
-        //stage.setResizable(false);
+        stage.setResizable(false);
         stage.show();
     }
 
