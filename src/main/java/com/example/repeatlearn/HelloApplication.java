@@ -2,6 +2,9 @@ package com.example.repeatlearn;
 
 import com.example.repeatlearn.controller.ImportNewWordController;
 import com.example.repeatlearn.controller.MainTemplateController;
+import com.example.repeatlearn.database.ConnectDB;
+import com.example.repeatlearn.database.InsertDB;
+import com.example.repeatlearn.model.Word;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -19,6 +22,12 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+
+
+        /* testing */
+
+
+        /* __________*/
     }
 
     public static void main(String[] args) {launch();}

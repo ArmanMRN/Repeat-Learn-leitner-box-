@@ -3,6 +3,7 @@ module com.example.repeatlearn {
     requires javafx.fxml;
     requires javafx.media;
     requires com.jfoenix;
+    requires java.sql;
 
 
     opens com.example.repeatlearn to javafx.fxml;
