@@ -1,6 +1,8 @@
 package com.example.repeatlearn.controller;
 
+import com.example.repeatlearn.build.Time;
 import com.example.repeatlearn.database.GetDataDB;
+import com.example.repeatlearn.database.InsertDB;
 import com.example.repeatlearn.model.Word;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
@@ -61,24 +63,34 @@ public class ReviewWordController {
     @FXML
     void btnCrerect_action(ActionEvent event) {
 
-        if (todaysWords.get(index).getRepeat_level() == 1){
+        //todo : complete this method
 
+        InsertDB insertDB = new InsertDB();
+        Word word = todaysWords.get(index);
+
+        if (word.getRepeat_level() == 1){
+
+            insertDB.updateNext_repeat_time(word.getId(), Time.getLevel_1_day());
+            insertDB.updateLevel(word.getId(),2);
         }
 
-        else if (todaysWords.get(index).getRepeat_level() == 2){
-
+        else if (word.getRepeat_level() == 2){
+            insertDB.updateNext_repeat_time(word.getId(), Time.getLevel_2_day());
+            insertDB.updateLevel(word.getId(),3);
         }
 
-        else if (todaysWords.get(index).getRepeat_level() == 3){
-
+        else if (word.getRepeat_level() == 3){
+            insertDB.updateNext_repeat_time(word.getId(), Time.getLevel_3_day());
+            insertDB.updateLevel(word.getId(),4);
         }
 
-        else if (todaysWords.get(index).getRepeat_level() == 4){
-
+        else if (word.getRepeat_level() == 4){
+            insertDB.updateNext_repeat_time(word.getId(), Time.getLevel_4_day());
+            insertDB.updateLevel(word.getId(),5);
         }
 
-        else if (todaysWords.get(index).getRepeat_level() == 5){
-
+        else if (word.getRepeat_level() == 5){
+            insertDB.updateIS_finished(word.getId());
         }
 
 

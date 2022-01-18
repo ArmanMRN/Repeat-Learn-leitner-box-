@@ -31,7 +31,7 @@ public class ImportNewWordController {
 
         Word word = new Word(textField_newWord_importNewWord.getText(),
                 textArea_wordDefinition_importNewWord.getText(),
-                0,
+                1,
                 Time.getToday(),
                 Time.getLevel_1_day(),
                 false);

@@ -108,13 +108,12 @@ public class GetDataDB {
 
             ResultSet resultSet = statement.executeQuery(url);
 
-            int i = 1;
             while(resultSet.next()){
 
-                if (resultSet.getLong("next_repeat_time") == Time.getToday()){
+                if (resultSet.getLong("next_repeat_time") == Time.getToday() && resultSet.getBoolean("is_finished")== false){
                     Word word = new Word();
 
-                    word.setId(i);
+                    word.setId(resultSet.getInt("id"));
                     word.setWord(resultSet.getString("word"));
                     word.setMeaning(resultSet.getString("meaning"));
                     word.setRepeat_level(resultSet.getInt("repeat_level"));
@@ -123,7 +122,6 @@ public class GetDataDB {
                     word.setIs_finished(resultSet.getBoolean("is_finished"));
 
                     words.add(word);
-                    i++;
                 }
 
 
