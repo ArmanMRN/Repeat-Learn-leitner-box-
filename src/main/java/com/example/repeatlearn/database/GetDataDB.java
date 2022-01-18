@@ -54,8 +54,6 @@ public class GetDataDB {
 
     public ArrayList<Word> getWordsInsertedByDay(Long day){
 
-        //:todo : fix this
-
         ArrayList<Word> words = new ArrayList<>();
 
         try {
@@ -85,6 +83,51 @@ public class GetDataDB {
 
 
                 }
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+        }
+
+        catch (SQLException e) {e.printStackTrace();}
+
+
+
+        return words;
+
+    }
+
+    public ArrayList<Word> getWordsMustReviewToday(){
+
+        ArrayList<Word> words = new ArrayList<>();
+
+        try {
+            statement = connection.createStatement();
+
+            String url = "select * from words";
+
+            ResultSet resultSet = statement.executeQuery(url);
+
+            int i = 1;
+            while(resultSet.next()){
+
+                if (resultSet.getLong("next_repeat_time") == Time.getToday()){
+                    Word word = new Word();
+
+                    word.setId(i);
+                    word.setWord(resultSet.getString("word"));
+                    word.setMeaning(resultSet.getString("meaning"));
+                    word.setRepeat_level(resultSet.getInt("repeat_level"));
+                    word.setEntered_time(resultSet.getLong("entered_time"));
+                    word.setNext_repeat_time(resultSet.getLong("next_repeat_time"));
+                    word.setIs_finished(resultSet.getBoolean("is_finished"));
+
+                    words.add(word);
+                    i++;
+                }
+
+
+            }
 
             resultSet.close();
             statement.close();

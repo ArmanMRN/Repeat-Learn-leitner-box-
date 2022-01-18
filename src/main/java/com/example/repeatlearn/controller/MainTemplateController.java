@@ -75,8 +75,10 @@ public class MainTemplateController {
     }
 
     @FXML
-    void btnMrorLogat_action(ActionEvent event) {
-
+    void btnMrorLogat_action(ActionEvent event) throws IOException {
+        hbox.getChildren().remove(1);
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/reviewWord-view.fxml"));
+        hbox.getChildren().add(anchorPane);
     }
 
     @FXML
