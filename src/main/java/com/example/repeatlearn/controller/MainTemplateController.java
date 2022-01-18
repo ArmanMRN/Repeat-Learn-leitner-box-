@@ -68,8 +68,10 @@ public class MainTemplateController {
     }
 
     @FXML
-    void btnLogateSabtShodeYeEmroz_action(ActionEvent event) {
-
+    void btnLogateSabtShodeYeEmroz_action(ActionEvent event) throws IOException {
+        hbox.getChildren().remove(1);
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/wordsInsertedToday-view.fxml"));
+        hbox.getChildren().add(anchorPane);
     }
 
     @FXML

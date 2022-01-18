@@ -1,7 +1,7 @@
 package com.example.repeatlearn.controller;
 
+import com.example.repeatlearn.build.Time;
 import com.example.repeatlearn.database.GetDataDB;
-import com.example.repeatlearn.model.Word;
 import com.example.repeatlearn.model.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,7 +14,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.util.ArrayList;
 
-public class AllWordsListController {
+public class WordsInsertedTodayController {
 
     @FXML
     private AnchorPane anchorPane_mainTemplate;
@@ -26,10 +26,10 @@ public class AllWordsListController {
     private TableView<Word> tableAllWordsList;
 
     @FXML
-    private TableColumn<Word, Integer> tableclID;
+    private TableColumn<Word,Integer> tableclID;
 
     @FXML
-    private TableColumn<Word, Boolean> tableclIsFinished;
+    private TableColumn<Word,Boolean> tableclIsFinished;
 
     @FXML
     private TableColumn<Word,Integer> tableclLevel;
@@ -48,10 +48,11 @@ public class AllWordsListController {
         tableclLevel.setCellValueFactory(new PropertyValueFactory<Word,Integer>("repeat_level"));
         tableclIsFinished.setCellValueFactory(new PropertyValueFactory<Word,Boolean>("is_finished"));
 
-        ArrayList<Word> arrayList = new GetDataDB().getAllWords();
+        ArrayList<Word> arrayList = new GetDataDB().getWordsInsertedByDay(Time.getToday());
 
         ObservableList<Word> list = FXCollections.observableArrayList(arrayList);
 
         tableAllWordsList.setItems(list);
     }
+
 }

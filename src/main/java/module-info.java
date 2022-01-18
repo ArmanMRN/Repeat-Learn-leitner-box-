@@ -10,4 +10,5 @@ module com.example.repeatlearn {
     exports com.example.repeatlearn;
     exports com.example.repeatlearn.controller;
     opens com.example.repeatlearn.controller to javafx.fxml;
+    opens com.example.repeatlearn.model;
 }
