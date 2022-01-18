@@ -47,42 +47,7 @@
          <children>
             <VBox prefHeight="574.0" prefWidth="192.0">
                <children>
-                  <Button fx:id="btnSabteLogateJadid" mnemonicParsing="false" onAction="#btnSabteLogateJadid_action" prefHeight="50.0" prefWidth="207.0" text="ثبت لغت جدید">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="5.0" />
-                     </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="207.0" text="لغات ثبت شده امروز">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="5.0" />
-                     </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="207.0" text="مرور لغات">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="5.0" />
-                     </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="207.0" text="لیست همه لغات">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="5.0" />
-                     </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="207.0" text="لیست همه لغات بر حسب روز">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="5.0" />
-                     </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="207.0" text="آزمون">
+                  <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeAction" prefHeight="50.0" prefWidth="207.0" text="خانه">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -90,7 +55,50 @@
                         <Insets left="2.0" right="2.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="207.0" text="تنظیمات">
+                  <Button fx:id="btnSabteLogateJadid" mnemonicParsing="false" onAction="#btnSabteLogateJadid_action" prefHeight="50.0" prefWidth="207.0" text="ثبت لغت جدید">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnLogateSabtShodeYeEmroz" mnemonicParsing="false" onAction="#btnLogateSabtShodeYeEmroz_action" prefHeight="50.0" prefWidth="207.0" text="لغات ثبت شده امروز">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnMrorLogat" mnemonicParsing="false" onAction="#btnMrorLogat_action" prefHeight="50.0" prefWidth="207.0" text="مرور لغات">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnListeHameyeLogat" mnemonicParsing="false" onAction="#btnListeHameyeLogat_action" prefHeight="50.0" prefWidth="207.0" text="لیست همه لغات">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnListeHameyeLogatBarHasbRoz" mnemonicParsing="false" onAction="#btnListeHameyeLogatBarHasbRoz_aciton" prefHeight="50.0" prefWidth="207.0" text="لیست همه لغات بر حسب روز">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="5.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="btnAzmon" mnemonicParsing="false" onAction="#btnAzmon_action" prefHeight="50.0" prefWidth="207.0" text="آزمون">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnTanzimat" mnemonicParsing="false" onAction="#btnTanzimat_action" prefHeight="50.0" prefWidth="207.0" text="تنظیمات">
                      <font>
                         <Font size="14.0" />
                      </font>

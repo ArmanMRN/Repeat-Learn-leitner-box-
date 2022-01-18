@@ -16,17 +16,78 @@ import java.io.IOException;
 
 public class MainTemplateController {
 
-    /*@FXML
-    private AnchorPane anchorPane_mainTemplate;*/
+    @FXML
+    private Button btnHome;
+
+    @FXML
+    private Button btnAzmon;
+
+    @FXML
+    private Button btnListeHameyeLogat;
+
+    @FXML
+    private Button btnListeHameyeLogatBarHasbRoz;
+
+    @FXML
+    private Button btnLogateSabtShodeYeEmroz;
+
+    @FXML
+    private Button btnMrorLogat;
 
     @FXML
     private Button btnSabteLogateJadid;
 
     @FXML
+    private Button btnTanzimat;
+
+    @FXML
     private HBox hbox;
 
     @FXML
-    void btnSabteLogateJadid_action(ActionEvent event) {
+    void btnHomeAction(ActionEvent event) throws IOException {
+        hbox.getChildren().remove(1);
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/home-view.fxml"));
+        hbox.getChildren().add(anchorPane);
+    }
+
+    @FXML
+    void btnAzmon_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnListeHameyeLogatBarHasbRoz_aciton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnListeHameyeLogat_action(ActionEvent event) throws IOException {
+        hbox.getChildren().remove(1);
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/allWordsList-view.fxml"));
+        hbox.getChildren().add(anchorPane);
+    }
+
+    @FXML
+    void btnLogateSabtShodeYeEmroz_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnMrorLogat_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnSabteLogateJadid_action(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/importNewWord-view.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("");
+        stage.setScene(new Scene(root,600,400));
+        stage.show();
+    }
+
+    @FXML
+    void btnTanzimat_action(ActionEvent event) {
 
     }
 
@@ -37,7 +98,6 @@ public class MainTemplateController {
     public void initialize() throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/com/example/repeatlearn/home-view.fxml"));
         hbox.getChildren().add(anchorPane);
-
     }
 
     public void openPage() throws IOException {

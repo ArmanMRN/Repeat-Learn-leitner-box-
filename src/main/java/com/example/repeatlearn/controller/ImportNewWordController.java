@@ -1,5 +1,8 @@
 package com.example.repeatlearn.controller;
 
+import com.example.repeatlearn.build.Time;
+import com.example.repeatlearn.database.InsertDB;
+import com.example.repeatlearn.model.Word;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +28,18 @@ public class ImportNewWordController {
 
     @FXML
     void button_save_importNewWord_Action(ActionEvent event) {
+
+        Word word = new Word(textField_newWord_importNewWord.getText(),
+                textArea_wordDefinition_importNewWord.getText(),
+                0,
+                Time.getToday(),
+                Time.getLevel_1_day(),
+                false);
+
+        new InsertDB().insertIntoWords(word);
+
+        textArea_wordDefinition_importNewWord.setText("");
+        textField_newWord_importNewWord.setText("");
 
     }
 
