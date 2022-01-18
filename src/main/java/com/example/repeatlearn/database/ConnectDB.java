@@ -6,7 +6,7 @@ public class ConnectDB{
 
     private final static String url = "jdbc:mysql://localhost:3306/repeat_learn";
     private final static String username = "root";
-    private final static String password = "password";
+    private final static String password = "a1380729";
 
     private Connection connection;
 
